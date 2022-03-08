@@ -1,0 +1,34 @@
+let fetch = require('node-fetch')
+let timeout = 120000
+let poin = 500
+
+let handler = async (m, { conn, usedPrefix }) => {
+    conn.tebakkata = conn.tebakkata ? conn.tebakkata : {}
+    let id = m.chat
+    if (id in conn.tebakkata) return conn.reply(m.chat, 'Not yet answered!', conn.tebakkata[id][0])
+    let res = await fetch(API('amel', '/tebakkata', {}, 'apikey'))
+    if (!res.ok) throw eror
+    let json = await res.json()
+    if (!json.status) throw json
+    let caption = `
+${json.soal}
+
+Timeout *${(timeout / 1000).toFixed(2)} second*
+Type ${usedPrefix}teka for help
+`.trim()
+    conn.tebakkata[id] = [
+        await conn.sendButton(m.chat, caption, 'ɴᴀɴᴅʜᴜᴛᴛʏ ᴠ3', 'Help', '.teka', m),
+        json, poin,
+        setTimeout(() => {
+            if (conn.tebakkata[id]) conn.sendButton(m.chat, `Time is up!\nThe answer is *${json.jawaban}*`, 'ɴᴀɴᴅʜᴜᴛᴛʏ ᴠ3', 'Guess the word', '.tebakkata', conn.tebakkata[id][0])
+            delete conn.tebakkata[id]
+        }, timeout)
+    ]
+}
+handler.help = ['tebakkata']
+handler.tags = ['game']
+handler.command = /^tebakkata/i
+
+handler.game = true
+
+module.exports = handler

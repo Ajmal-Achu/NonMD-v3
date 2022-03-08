@@ -1,0 +1,13 @@
+let handler = async (m, { conn }) => {
+    conn.tebakkota = conn.tebakkota ? conn.tebakkota : {}
+    let id = m.chat
+    if (!(id in conn.tebakkota)) throw false
+    let json = conn.tebakkota[id][1]
+    let clue = json.jawaban.replace(/[AIUEOaiueo]/g, '_')
+    conn.reply(m.chat, '```' + clue + '```\nReply to the question, not this message!', conn.tebakkota[id][0])
+}
+handler.command = /^teko$/i
+
+handler.limit = 1
+
+module.exports = handler
