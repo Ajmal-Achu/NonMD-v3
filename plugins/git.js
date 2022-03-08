@@ -6,6 +6,7 @@ let handler = async (m, { conn }) => {
   *Official Website*
   https://a-j-m-a-l.github.io
  *Watch Tutorial Video*
+ https://youtu.be/bb2YfTT4Hv4
 `.trim()
     await conn.send2ButtonImg(m.chat, await (await fetch("https://telegra.ph/file/584b99e814690766d9761.jpg")).buffer(), haruno, 'Nandhutty V3', 'poli❤️', 'kk', 'Tnks😄', 'kk', m)
 }
