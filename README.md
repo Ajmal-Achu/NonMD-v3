@@ -31,7 +31,7 @@
 ## `DEPLOY`
 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/A-J-M-A-L/TEST.git) 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Ajmal-Achu/Nandhutty-V3.git) 
 ----------
 
 
