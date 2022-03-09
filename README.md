@@ -13,12 +13,12 @@
 ## ```HOW TO DEPLOY```
 `WATCH THE TUTORIAL VIDEO CAREFULLY TO DEPLOY THE BOT OTHERWISE CHANCES TO GET ERROR`
 
-[`Click Here For Tutorial`]()
+[`Click Here For Tutorial`](https://youtu.be/bb2YfTT4Hv4)
 
 ----------
 
 <p align="center">
-  <a href=""><img src="https://telegra.ph/file/1b06aa3851c72d40f7a8f.jpg" />
+  <a href="https://youtu.be/bb2YfTT4Hv4"><img src="https://telegra.ph/file/1b06aa3851c72d40f7a8f.jpg" />
 </p>
 
 -------
