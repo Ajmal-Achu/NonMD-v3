@@ -6,12 +6,12 @@ let handler = async (m, { conn, usedPrefix, text }) => {
     let id = m.chat
     if (id in conn.absen) return await conn.sendButton(m.chat, `There are still absences in this chat!`, 'watermark', 'Delete', `${usedPrefix}-absence`, conn.absen[id][0])
     conn.absen[id] = [
-        await conn.sendButton(m.chat, `Absence begins``, 'watermark', 'Absence', `${usedPrefix}absence`, m),
+        await conn.sendButton(m.chat, `Absence begins`, 'watermark', 'Absence', `${usedPrefix}absence`, m),
         [],
         text
     ]
 }
-handler.help = ['mulaiabsen [teks]']
+handler.help = ['mulaiabsen [text]']
 handler.tags = ['absen']
 handler.command = /^(\+|start|mulai)absen$/i
 
