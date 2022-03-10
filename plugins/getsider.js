@@ -10,7 +10,7 @@ ${reads.sort((a, b) => bt - at).map(({ jid, t }) => `@${jid.split`@`[0]}\n_${for
 ${members > 1 ? `${members - reads.length} remaining` : ''}
 
 *Sent to:*
-${deliveries.sort((a, b) => bt - at).map((({ jid, t }) => `wa.me/${jid.split`@`[0]}\n_${ formatDate(t * 1000)}_`).join('\n')}
+${deliveries.sort((a, b) => bt - at).map((({ jid, t }) => `wa.me/${jid.split`@`[0]}\n_${ formatDate(t * 1000)}_`).join('\n'))}
 ${members > 1 ? `${members - reads.length - deliveries.length} remaining` : ''}
 `.trim()
   m.reply(txt, null, {
