@@ -9,7 +9,7 @@ async function handler(m) {
         throw false
     }
     let res = await fetch(API('amel', '/family100', { }, 'apikey'))
-    if (!res.ok) throws error
+    if (!res.ok) throw error
     let json = await res.json()
     if (!json.status) throw json
     let caption = `
