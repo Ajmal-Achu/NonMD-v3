@@ -7,10 +7,10 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
     let txt = text.replace('@' + who.split`@`[0], '').trim()
     if (!txt) throw `Which number?\n\nExample:\n${usedPrefix + command} @0 1`
     if (isNaN(txt)) return m.reply(`Only numbers!\n\nExample:\n${usedPrefix + command} @0 1`)
-    var number ofDays = 86400000 * txt
+    var numberofDays = 86400000 * txt
     var now = new Date() * 1
-    if (now < user.premiumTime) user.premiumTime += number ofDays
-    else user.premiumTime = now + number ofDays
+    if (now < user.premiumTime) user.premiumTime += numberofDays
+    else user.premiumTime = now + numberofDays
     user.premium = true
     m.reply(`Successfully added *${user.name}* as Premium user for ${txt} days.\n\nCountdown: ${conn.msToDate(user.premiumTime - now)}`)
 }
