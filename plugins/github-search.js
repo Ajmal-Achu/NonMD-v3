@@ -5,7 +5,7 @@ let handler = async(m, { text, command, usedPrefix }) => {
     let res = await fetch(global.API('https://api.github.com', '/search/repositories', {
         q: text
     }))
-    if (!res.ok) throws error
+    if (!res.ok) throw error
     let json = await res.json()
     let str = json.items.map((repo, index) => {
         return `
@@ -21,7 +21,7 @@ ${repo.open_issues} Issue${repo.description ? `
     }).join('\n\n')
     m.reply(str)
 }
-handler.help = ['githubsearch'].map(v => v + ' <search>')
+handler.help = ['githubsearch','ghsearch'].map(v => v + ' <search>')
 handler.tags = ['tools']
 
 handler.command = /^g(ithub|h)search$/i
