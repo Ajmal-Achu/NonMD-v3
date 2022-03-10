@@ -6,7 +6,7 @@ ${usedPrefix + command} add 919744196187,12345678901.0
 ${usedPrefix + command} remove 919744196187,12345678901.0
 `.trim()
     let type = args[0].toLowerCase() === 'add' ? true : false
-    let text = text.replace(args[0], '').trim()
+    let text1 = text.replace(args[0], '').trim()
     let users = text.split(',').map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net')
     for (let who of users) {
         let user = global.db.data.users[who]
