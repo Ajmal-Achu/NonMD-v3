@@ -13,7 +13,7 @@ let handler = async(m, { command, usedPrefix }) => {
     methods: 'POST',
     body
   })
-  if (!res.ok) throws error
+  if (!res.ok) throw error
   await conn.sendFile(m.chat, await res.buffer(), 'hd.jpg', '', m)
 }
 handler.help = ['hd', 'enhance']
