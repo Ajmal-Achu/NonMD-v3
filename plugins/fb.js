@@ -4,7 +4,7 @@ let handler = async(m, { conn, args, usedPrefix, command }) => {
   if (/^https?:\/\/.*(fb.watch|facebook.com)/i.test(m.text)) throw `wrong url`
 
   let res = await fetch(API('neoxr', '/api/download/fb', { url: args[0] }, 'apikey'))
-  if (!res.ok) throws error
+  if (!res.ok) throw error
   let json = await res.json()
   if (!json.status) throw json
   await m.reply(wait)
