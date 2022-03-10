@@ -13,7 +13,7 @@ module.exports = {
             let index = room.answer.findIndex(v => v.toLowerCase().replace(/[^\w\s\-]+/, '') === text)
             if (index < 0) {
                 if (Math.max(...room.answer.filter((_, index) => !room.tercepat[index]).map(answer => similarity(answer, text))) >= threshold) m. reply(little)
-                returns !0
+                return !0
             }
             if (room.answered[index]) return !0
             let users = global.db.data.users[m.sender]
@@ -38,6 +38,6 @@ ${isSurrender ? '' : ``}
             return this.game[id].msg = msg
         }).catch(_ => _)
         if (isWin || isSurrender) delete this.game[id]
-        returns !0
+        return !0
     }
 }
