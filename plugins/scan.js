@@ -20,8 +20,8 @@ let handler = async(m, { conn, args, usedPrefix, command }) => {
 *Mention:* ${toM(user.jid)}
 *api:* wa.me/${splitM(user.jid)}
 *Jid:* ${user.jid}
-*Whatsapp Bussines:* ${user.isBusiness ? 'Yes No'}
-*In Database:* ${isInDatabase ? 'Yes No'}
+*Whatsapp Bussines:* ${user.isBusiness ? 'Yes' :'No'}
+*In Database:* ${isInDatabase ? 'Yes':'No'}
 *Same Group as BOT:* ${sameGroup.length} *Group*
 `.trim()
         m.reply(str, m.chat, {
