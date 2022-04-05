@@ -1,7 +1,7 @@
 let handler = async (m, { conn, usedPrefix }) => {
     let id = m.chat
     conn.absen = conn.absen ? conn.absen : {}
-    if (!(id in conn.absen)) return await conn.sendButton(m.chat, `Tidak ada absen berlangsung!`, 'ɴᴀɴᴅʜᴜᴛᴛʏ ᴠ3', 'Mulai', `${usedPrefix}mulaiabsen`, m)
+    if (!(id in conn.absen)) return await conn.sendButton(m.chat, `Tidak ada absen berlangsung!`, 'Ⓒ︎Ⓗ︎Ⓘ︎Ⓝ︎Ⓣ︎Ⓤ︎ 🅑︎🅞︎🅣︎', 'Mulai', `${usedPrefix}mulaiabsen`, m)
     let absen = conn.absen[id][1]
     const wasVote = absen.includes(m.sender)
     if (wasVote) throw '*Kamu sudah absen!*'

@@ -18,7 +18,7 @@ ${usedPrefix + command} <buka/tutup>
 Example :
 ${usedPrefix + command} open
 ${usedPrefix + command} close
-	`.trim(), 'ɴᴀɴᴅʜᴜᴛᴛʏ ᴠ3', 'Open', ',grup 1', 'Close', ',grup 0', m)
+	`.trim(), 'Ⓒ︎Ⓗ︎Ⓘ︎Ⓝ︎Ⓣ︎Ⓤ︎ 🅑︎🅞︎🅣︎', 'Open', ',grup 1', 'Close', ',grup 0', m)
 		throw 0
 	}
 	await conn.groupSettingChange(m.chat, GroupSettingChange.messageSend, isClose)
